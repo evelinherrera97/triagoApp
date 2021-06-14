@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Triago
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <div id="container">
+    <ion-row>
+      <ion-col>
+        <label for="inp" class="inp">
+          <input  type="text" id="inp" placeholder="&nbsp;">
+          <span class="label">Usuario</span>
+          <span class="focus-bg"></span>
+        </label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <label for="inp" class="inp">
+          <input  type="text" id="inp" placeholder="&nbsp;">
+          <span class="label">Contraseña</span>
+          <span class="focus-bg"></span>
+        </label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-button [text]="'Continuar'" [color]="'button-primary'"></app-button>
+      </ion-col>
+    </ion-row>
+    
+
+    
+<app-button [text]="'Cancelar'" [color]="'button-line'"></app-button> 
+  </div>
+</ion-content>
