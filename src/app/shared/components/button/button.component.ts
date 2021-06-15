@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-button',
@@ -8,10 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   @Input() color: string;
-  @Input() text: string;
+  @Input() text: any;
   @Input() isDisabled: boolean;
 
-  constructor() { }
+  constructor(
+    public translateService: TranslateService,
+  ) { }
 
   ngOnInit() {}
 

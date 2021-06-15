@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './components/button/button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
@@ -9,10 +10,12 @@ import { ButtonComponent } from './components/button/button.component';
     ButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TranslateModule
   ],
   exports: [
-    ButtonComponent
+    ButtonComponent,
+    TranslateModule
   ]
 })
 export class SharedModule { }
