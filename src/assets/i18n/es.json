@@ -2,5 +2,19 @@
     "buttons": {
         "continue": "Continuar",
         "cancel": "Cancelar"
-    }
+    },
+    "labels": {
+        "user": "Usuario",
+        "password": "Contraseña"
+    },
+    "login": {
+        "title": "Iniciar sesion",
+        "initTitle": "Accede a tu cuenta",
+        "seconfTitle": "ingresa tus datos para iniciar",
+        "number": "numero de documento",
+        "password": "Contraseña"
+
+    },
+
+    "register": "Registro"
 }

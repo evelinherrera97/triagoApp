@@ -1,41 +1,74 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Triago
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" >
 
-<ion-content [fullscreen]="true">
-
-
+  
   <div id="container">
-    <ion-row>
-      <ion-col>
-        <label for="inp" class="inp">
-          <input  type="text" id="inp" placeholder="&nbsp;">
-          <span class="label">Usuario</span>
-          <span class="focus-bg"></span>
-        </label>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <label for="inp" class="inp">
-          <input  type="text" id="inp" placeholder="&nbsp;">
-          <span class="label">Contraseña</span>
-          <span class="focus-bg"></span>
-        </label>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <app-button [text]="'buttonsh.continue'" [color]="'button-primary'"></app-button>
-      </ion-col>
-    </ion-row>
-    
+    <div class="content-logo">
+      <img src="../../../../assets/icon/logo.png">
+    </div>
+  
+    <app-principal-card>
+      <ion-row class="card-header">
+        <ion-col>
+          <h1 class="title">{{'login.initTitle' | translate}}</h1>
+          <p class="secodtitle">{{'login.seconfTitle' | translate}}</p>
+        </ion-col>
+      </ion-row>
+      <div class="card-form">
+        <form [formGroup]="loginForm">
+        <ion-row>
+          <ion-col size="3">
+            <label for="inp" class="inp">
+              <select name="" id="inp" formControlName="typeDoc">
+                <option value="cc">CC</option>
+                <option value="ti">TI</option>
+              </select>
+              <span class="label">CC</span>
+              <span class="focus-bg"></span>
+            </label>
+          </ion-col>
+          <ion-col>
+            <label for="inp" class="inp">
+              <input type="text" id="inp" formControlName="id">
+              <span class="label">Numero de documento</span>
+              <span class="focus-bg"></span>
+            </label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <label for="inp" class="inp">
+              <input type="password" id="inp" formControlName="password">
+              <span class="label">{{'labels.password' | translate}}</span>
+              <span class="focus-bg"></span>
+            </label>
+          </ion-col>
+        </ion-row>
+      </form>
+      </div>
+      <div class="card-button">
+        <ion-row>
+          <ion-col>
+            <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'" (clickButton)="onSubmit()" ></app-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <a href="">
+            olvidaste tu usuario
+          </a>
+        </ion-row>
+      </div>
 
-    
-<app-button [text]="'Cancelar'" [color]="'button-line'"></app-button> 
+    </app-principal-card>
+
+    <div class="content-terms">
+      <p>Al ingresar, estás aceptando los <a>términos Y condiciones de uso</a> y <a>políticas de privacidad</a></p>
+    </div>
   </div>
+
+ 
 </ion-content>
