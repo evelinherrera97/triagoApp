@@ -13,7 +13,7 @@
           <p class="secodtitle">{{'login.seconfTitle' | translate}}</p>
         </ion-col>
       </ion-row>
-      <div class="card-form">
+      <div class="card-form" >
         <form [formGroup]="loginForm">
         <ion-row>
           <ion-col size="3">
@@ -29,7 +29,7 @@
           <ion-col>
             <label for="inp" class="inp">
               <input type="text" id="inp" formControlName="id">
-              <span class="label">Numero de documento</span>
+              <span class="label">{{'login.number' | translate}}</span>
               <span class="focus-bg"></span>
             </label>
           </ion-col>
@@ -38,7 +38,7 @@
           <ion-col>
             <label for="inp" class="inp">
               <input type="password" id="inp" formControlName="password">
-              <span class="label">{{'labels.password' | translate}}</span>
+              <span class="label">{{'login.password' | translate}}</span>
               <span class="focus-bg"></span>
             </label>
           </ion-col>
@@ -57,16 +57,20 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <a href="">
-            olvidaste tu usuario
-          </a>
+          <ion-col>
+            <p class="text-forget-password">
+              <a href="">
+                {{'login.forget-user' | translate}}
+              </a>
+            </p>
+          </ion-col>          
         </ion-row>
       </div>
 
     </app-principal-card>
 
     <div class="content-terms">
-      <p>Al ingresar, estás aceptando los <a>términos Y condiciones de uso</a> y <a>políticas de privacidad</a></p>
+      <p> {{'login.terms' | translate}} <a>{{'login.terms-use' | translate}}</a> {{'login.and' | translate}} <a>{{'login.terms-privacy' | translate}}</a></p>
     </div>
   </div>
 

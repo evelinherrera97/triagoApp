@@ -5,7 +5,22 @@
     },
     "labels": {
         "user": "User",
-        "password": "password"
+        "password": "Password"
     },
-    "title": "Login"
+    "title": "Login",
+
+    "login": {
+        "title": "Login",
+        "initTitle": "Login into your account",
+        "seconfTitle": "Enter your data to start",
+        "number": "Document number",
+        "password": "Password",
+        "forget-user": "Forget user",
+        "terms": "By logging in, you are accepting the",
+        "terms-use": "terms and conditions of use",
+        "and": "and", 
+        "terms-privacy": "privacy policy"
+    },
+
+    "register": "Register"
 }
