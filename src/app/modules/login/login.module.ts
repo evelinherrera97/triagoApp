@@ -11,10 +11,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [LoginComponent],
   imports: [
-    FormsModule,
-    IonicModule,
-    CommonModule,
     LoginRoutingModule,
+    CommonModule,
+    IonicModule,
+    FormsModule,
     SharedModule,
     ReactiveFormsModule
   ],

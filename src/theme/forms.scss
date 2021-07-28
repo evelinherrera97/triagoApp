@@ -19,6 +19,7 @@
         transform: translate3d(0,0,0);
         transition: all .2s ease;
         pointer-events: none;
+        width: 350px;
     }
         
     .focus-bg {
@@ -28,7 +29,7 @@
         transform: scaleX(0);
         transform-origin: left;
     }
-    input, select {
+    input, select, ion-datetime {
         -webkit-appearance: none;
         appearance: none;
         width: 100%;
@@ -61,6 +62,11 @@
                 }
         }
     } 
+    ion-datetime {
+        + .label {
+            top: 19px;
+        }
+    }
     
 }
 
