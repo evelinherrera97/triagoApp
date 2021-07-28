@@ -8,6 +8,7 @@
        @extend %riple-content-logo
     }
     app-principal-card {
+
         .card-header {
             @extend %riple-card-header
         }
@@ -17,11 +18,16 @@
         }
         .card-button {
             margin-top: 20px;
+            
+            .text-forget-password{
+                text-align: center;
+            }
         }
+
     }
     .content-terms {
         padding: 10px 60px;
         p { text-align: center; }
     }
-    
+
 }

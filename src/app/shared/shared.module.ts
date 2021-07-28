@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './components/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { PrincipalCardComponent } from './components/principal-card/principal-card.component';
+import { StepComponent } from './components/step/step.component';
 
 
 
 @NgModule({
   declarations: [
     ButtonComponent,
-    PrincipalCardComponent
+    PrincipalCardComponent,
+    StepComponent
   ],
   imports: [
     CommonModule,
@@ -18,7 +20,8 @@ import { PrincipalCardComponent } from './components/principal-card/principal-ca
   exports: [
     ButtonComponent,
     PrincipalCardComponent,
-    TranslateModule
+    TranslateModule,
+    StepComponent
   ]
 })
 export class SharedModule { }
