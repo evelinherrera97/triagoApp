@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,8 +9,10 @@ import { TranslateService } from '@ngx-translate/core';
 export class ButtonComponent implements OnInit {
 
   @Input() color: string;
-  @Input() text: any;
+  @Input() text: string;
   @Input() isDisabled: boolean;
+  @Input() type: string;
+  @Output() clickButton = new EventEmitter<string>();
 
   constructor(
     public translateService: TranslateService,
@@ -18,6 +20,8 @@ export class ButtonComponent implements OnInit {
 
   ngOnInit() {}
 
-  callAction(){}
+  callAction(){
+    this.clickButton.emit();
+  }
 
 }

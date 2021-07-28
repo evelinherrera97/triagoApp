@@ -5,17 +5,18 @@ import { LoginRoutingModule } from './login-routing.module';
 import { LoginComponent } from './../login/components/login.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
-    FormsModule,
-    IonicModule,
-    CommonModule,
     LoginRoutingModule,
-    SharedModule
+    CommonModule,
+    IonicModule,
+    FormsModule,
+    SharedModule,
+    ReactiveFormsModule
   ],
 })
 export class LoginModule { }

@@ -1,19 +1,33 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <div id="container">
-    
+    <div>
+      <ion-slides pager="true" class="card-container">
+        <ion-slide class="slide-content">
+          <h1>TRIAGO</h1>
+          <img src="../../../assets/icon/user.png" alt="" srcset="">
+        </ion-slide>
+        <ion-slide>
+          <h1>Slide 2</h1>
+        </ion-slide>
+        <ion-slide>
+          <h1>Slide 3</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam et quibusdam expedita excepturi quia? Accusamus sunt adipisci voluptas commodi natus provident omnis nostrum debitis animi, labore est consequuntur. Temporibus, ipsam?</p>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <div>
+      <ion-row>
+        <ion-col>
+          <app-button [type]="'button'" [text]="'buttons.continue'" [color]="'button-primary'" routerLink="/login" ></app-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <app-button [type]="'button'" [text]="'buttons.continue'" [color]="'button-line'" routerLink="/register"></app-button>
+        </ion-col>
+      </ion-row>
+    </div>
   </div>
 </ion-content>

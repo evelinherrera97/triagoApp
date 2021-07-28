@@ -3,7 +3,7 @@
 
 /*PALLET COLOR*/
 $blue: #00c0fb;
-$purple:  #5938c8;
+
 $green: #9ccb49;
 $yellow: #ffe100;
 $orange: #ffa900;
@@ -13,6 +13,35 @@ $ligth-gray: #eef0f2;
 $dark-blue: #071e54 ;
 $ligth-blue: #d8e9f7;
 $white: #ffffff;
+$backgroup: #EEF0F2;
+$purple:  #5938C8;
+
+%riple-contaniner {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  background-color: #EEF0F2;
+  padding-top: 40px;
+}
+%riple-content-logo {
+  margin-bottom: 50px;
+  img { width: 150px;}
+}
+
+%riple-card-header {
+  margin-bottom: 20px;
+  .title {
+      text-align: center;
+      margin-bottom: 0;
+      font-weight: bold;
+  }
+  .secodtitle{
+      text-align: center;
+      margin: 0;
+  }
+}
+
 
 
 /** Ionic CSS Variables **/
