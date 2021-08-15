@@ -1,0 +1,100 @@
+app-pin-field {
+    .text-field {
+        z-index: 1;
+        width: 100%;
+        font-size: 1em;
+        border: 0;
+        transition: border-color 200ms ease-in-out;
+        outline: none;
+        background-color: transparent;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: white;
+        .show-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            border-bottom: 1px solid black;
+            &.disabled {
+                opacity: .3;
+                cursor: not-allowed !important;
+                input {
+                    opacity: .3;
+                    cursor: not-allowed !important;
+                }
+            }
+            &.error {
+                color: color(red, danger) !important;
+                border-bottom: 2px solid color(red, danger) !important;
+                p {
+                    color: color(red, danger) !important;
+                }
+            }
+            &.focus {
+                border-bottom: 2px solid color(blue, primary);
+            }
+            &.status {
+                border-bottom: 2px solid color(blue, secondary);
+            }
+        }
+        * {
+            background: wheat;
+        }
+        
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        align-items: center;
+        .input-group {
+            border: solid 2px;
+            display: grid;
+            align-items: center;
+            text-align: center;
+            &:focus {
+                outline: none !important;
+            }
+        }
+        .individual-input {
+            color: black;
+            border: none;
+            width: 30%;
+            height: 1em;
+            text-align: center;
+            font-size: 1.3em;
+            padding: 0;
+        }
+    }
+    select,
+    textarea,
+    button {
+        outline: none;
+        margin-left: 30%;
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -webkit-text-security: disc;
+        margin: 0;
+    }
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+        margin-left: 30%;
+    }
+    .message {
+        min-height: 20px;
+        &.error {
+            p {
+                color: color(red, danger) !important;
+            }
+        }
+        p {
+            color: black;
+            font-size: 14px;
+        }
+    }
+}

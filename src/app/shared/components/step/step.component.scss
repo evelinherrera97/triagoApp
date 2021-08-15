@@ -1,0 +1,23 @@
+.stepper {
+    display: flex;
+    .content-step {
+        display: flex;
+    }
+    .cicle {
+        content: "1";
+        width: 30px;
+        height: 30px;
+        color: white;
+        background: black;
+        border-radius: 50%;
+    }
+    .liner {
+        width: 70px;
+        height: 5px;
+        border: 1px solid red;
+        background: red;
+    }
+    span:last-child {
+        background-color: blue;
+    }
+}
