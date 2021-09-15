@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { PrincipalCardComponent } from './components/principal-card/principal-card.component';
 import { PinFieldComponent } from './components/pin-field/pin-field.component';
 import { StepComponent } from './components/step/step.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -17,7 +18,8 @@ import { StepComponent } from './components/step/step.component';
   ],
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule
   ],
   exports: [
     ButtonComponent,

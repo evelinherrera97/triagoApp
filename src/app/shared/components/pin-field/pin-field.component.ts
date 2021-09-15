@@ -1,13 +1,21 @@
-import { Component, OnInit, Input, HostListener } from '@angular/core';
+import { Component, OnInit, Input, HostListener, forwardRef } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-pin-field',
   templateUrl: './pin-field.component.html',
   styleUrls: ['./pin-field.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => PinFieldComponent),
+      multi: true
+    }
+  ]
 })
 export class PinFieldComponent implements OnInit {
 
-  @Input() length = 4;
+  @Input() length = 5;
   @Input()
   set pattern(pattern: string) {
     this._pattern = new RegExp(pattern);
@@ -20,6 +28,7 @@ export class PinFieldComponent implements OnInit {
   inputsArray = new Array<any>();
   _pattern: RegExp;
   valueOnInput = '';
+  public input;
   allowedKeys: Array<number> = [9, 13, 16, 17, 18, 19,
     20, 27, 32, 33, 34, 35, 36, 37, 38, 39, 40,
     45, 46, 91, 92, 93, 104, 105, 106, 107, 109,
@@ -29,7 +38,6 @@ export class PinFieldComponent implements OnInit {
   inputChar = '';
   disabled = false;
   valueOnActualInput = '';
-  @Input() message = '';
   onChange = (valueOnInput: string) => { };
   onTouched = () => { };
 
@@ -64,7 +72,6 @@ export class PinFieldComponent implements OnInit {
   }
 
 
-
   writeValue(obj: any): void {
     if (obj === '') {
       this.valueOnInput = '';
@@ -73,9 +80,9 @@ export class PinFieldComponent implements OnInit {
       return;
     }
     this.validateState();
-    if (!this._pattern.test(this.inputChar)) {
-      return;
-    }
+    // if (!this._pattern.test(this.inputChar)) {
+    //   return;
+    // }
     if (this.inputsArray[obj.index].model !== '') {
       if (obj.index !== this.length - 1) {
         obj.index += 1;
@@ -107,7 +114,7 @@ export class PinFieldComponent implements OnInit {
   }
 
   isEventCodeKey(obj) {
-    if (obj.event.keyCode !== 8 && (obj.event.keyCode !== 229 || this.charPress) ) {
+    if (obj.event.keyCode !== 8 && (obj.event.keyCode !== 229 || this.charPress)) {
       this.valueOnInput = this.replaceAt(this.valueOnInput, obj.index, this.inputChar);
       this.inputsArray[obj.index].model = this.charMask;
       if (obj.index !== this.length - 1) {

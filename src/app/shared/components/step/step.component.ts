@@ -7,22 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StepComponent implements OnInit {
 
-  // @Input() info: any
-  info:any
+  @Input() info: any
 
   constructor() { }
 
   ngOnInit() {
-    this.info = [
-     {
-       type:'success',
-       text: 'ok'
-     },
-     {
-       type:'success',
-       text: 'ok'
-     } 
-    ]
+    
   }
 
 }

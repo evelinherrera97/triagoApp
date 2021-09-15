@@ -4,12 +4,28 @@
         display: flex;
     }
     .cicle {
-        content: "1";
-        width: 30px;
-        height: 30px;
-        color: white;
-        background: black;
+        width: 46px;
+        height: 46px;
         border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        &.current {
+            border: 2px solid blue;
+            background: white;
+            color: blue;
+        }
+        &.next {
+            background: linear-gradient(90deg, rgba(0,192,251,1) 0%, #5938c8 100%);
+            border: 2px solid white;
+            color: white;
+        }
+        &.ok{
+            background: greenyellow;
+            border: white;
+            color: white;
+        }
     }
     .liner {
         width: 70px;

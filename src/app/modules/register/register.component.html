@@ -5,13 +5,19 @@
         </div>
 
         <app-principal-card class="card-principal">
+            <div class="content-stepper">
+                <app-step class="stepper" [info]="info"></app-step>
+            </div>
             <ion-row class="card-header">
                 <ion-col>
                     <h1 class="title">¿Quien eres?</h1>
                     <p class="secodtitle">queremos conocerte</p>
                 </ion-col>
             </ion-row>
-            <form [formGroup]="registerFormStepOne" *ngIf="stepOne">
+            <!-- <app-pin-field pattern="[0-9]" [state]=state [id]="'pin_debit'" ngDefaultControl [(ngModel)]="pin"
+            (ngModelChange)="getPin($event)" message="'hola que mas pues'">
+          </app-pin-field> -->
+             <form [formGroup]="registerFormStepOne" *ngIf="stepOne">
                 <div class="step-one">
                     <ion-row>
                         <ion-col size="12">
@@ -176,7 +182,7 @@
                         </ion-col>
                     </ion-row>
                 </div>
-            </form>
+            </form> 
 
         </app-principal-card>
     </div>
