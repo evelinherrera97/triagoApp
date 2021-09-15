@@ -1,8 +1,5 @@
-    <div class="container">    
-            <div class="step-primary">1</div>
-            <div class="line"></div>
-            <div class="bullet">2</div>
-            <div class="line-two"></div>
-            <div class="bullet">3</div>        
-    </div>
-
+<div class="stepper">
+  <div *ngFor="let item of info" class="content-step">
+    <div class="cicle {{item.type}}">{{item.text}}</div>
+  </div>
+</div>

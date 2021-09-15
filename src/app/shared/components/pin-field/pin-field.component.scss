@@ -1,0 +1,38 @@
+
+    .text-field {
+        z-index: 1;
+        width: 100%;
+        font-size: 1em;
+        border-radius: 12px;
+        border: 2px solid #6154FE80;
+        outline: none;
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: white;
+        .show-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 2px solid #6154FE80;
+          
+        }
+        .individual-input {
+            color: black;
+            border: none;
+            width: 30%;
+            height: 1em;
+            text-align: center;
+            font-size: 1.3em;
+            padding: 0;
+        }
+    }
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -webkit-text-security: disc;
+        margin: 0;
+    }
+

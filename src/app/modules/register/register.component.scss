@@ -2,13 +2,21 @@
 @import "../../../theme/variables.scss";
 
 #container {
-  
     @extend %riple-contaniner;
     align-items: center;
     .content-logo {
         @extend %riple-content-logo;
     }
     app-principal-card {
+        .content-stepper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .stepper {
+                position: absolute;
+                top: -20px;
+            }
+        }
         .card-header {
             @extend %riple-card-header;
         }

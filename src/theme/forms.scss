@@ -62,6 +62,10 @@
                 }
         }
     } 
+    .error {
+        border:  2px solid red;
+        color: red;
+    }
     ion-datetime {
         + .label {
             top: 19px;

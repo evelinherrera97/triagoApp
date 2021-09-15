@@ -1,0 +1,9 @@
+<div class="text-field">
+  <div *ngFor="let input of inputsArray;let i =index">
+    <div class="show-line" (click)="focusInput(i)">
+      <input [disabled]="state==='disabled'" type="tel" class="individual-input" [(ngModel)]="input.model"
+        name="{{id +i}}" maxlength="1" id="{{id + i}}" (keyup)="writeValue({event: $event,index: i})">
+    </div>
+  </div>
+</div>
+

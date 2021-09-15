@@ -5,167 +5,184 @@
         </div>
 
         <app-principal-card class="card-principal">
+            <div class="content-stepper">
+                <app-step class="stepper" [info]="info"></app-step>
+            </div>
             <ion-row class="card-header">
                 <ion-col>
                     <h1 class="title">¿Quien eres?</h1>
                     <p class="secodtitle">queremos conocerte</p>
                 </ion-col>
             </ion-row>
-                <form [formGroup]="registerFormStepOne" *ngIf="stepOne">
-                    <div class="step-one">
-                        <ion-row>
-                            <ion-col>
-                                <label for="name" class="inp">
-                                    <input type="text" id="name" formControlName="name">
-                                    <span class="label">Nombres</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                <label for="surname" class="inp">
-                                    <input type="text" id="surname" formControlName="surname">
-                                    <span class="label">Apellidos</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                <label for="birthDate" class="inp">
-                                    <ion-datetime displayFormat="MM DD YY" id="birthDate" formControlName="birthDate">
-                                    </ion-datetime>
-                                    <span class="label">Fecha de nacimiento</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                    </div>
-                    <div class="card-button">
-                        <ion-row>
-                            <ion-col>
-                                <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'"
-                                    (clickButton)="onSubmitStepOne()"></app-button>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
-                            </ion-col>
-                        </ion-row>
-                    </div>
-                </form>
-                <form [formGroup]="registerFormStepTwo" *ngIf="stepTwo">
-                    <div class="step-two">
-                        <ion-row>
-                            <ion-col size="3">
-                                <label for="documentType" class="inp">
-                                    <select id="documentType" formControlName="documentType">
-                                        <option value="cc">CC</option>
-                                        <option value="ti">TI</option>
-                                    </select>
-                                    <span class="label">CC</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                            <ion-col>
-                                <label for="document" class="inp">
-                                    <input type="text" id="document" formControlName="document">
-                                    <span class="label">Número de documento</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                <label for="password" class="inp">
-                                    <input type="password" id="password" formControlName="password">
-                                    <span class="label">Contraseña</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col size="3">
-                                <label for="inp" class="inp">
-                                    <select name="" id="inp" formControlName="typeDoc">
-                                        <option value="cc">Col</option>
-                                        <option value="ti">Ven</option>
-                                    </select>
-                                    <span class="label"></span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                            <ion-col>
-                                <label for="phoneNumber" class="inp">
-                                    <input type="text" id="phoneNumber" formControlName="phoneNumber">
-                                    <span class="label">Número de teléfono</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                    </div>
-                    <div class="card-button">
-                        <ion-row>
-                            <ion-col>
-                                <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'"
-                                    (clickButton)="onSubmitStepTwo()"></app-button>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
-                            </ion-col>
-                        </ion-row>
-                    </div>
-                </form>
-                <form [formGroup]="registerFormStepThree" *ngIf="stepThree">
-                    <div class="step-three" >
-                        <ion-row>
-                            <ion-col>
-                                <label for="emergencyContactName" class="inp">
-                                    <input type="text" id="emergencyContactName" formControlName="emergencyContactName">
-                                    <span class="label">Nombre completo del contacto</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col size="3">
-                                <label for="country" class="inp">
-                                    <select id="country" formControlName="country">
-                                        <option value="cc">+57</option>
-                                        <option value="ti">+507</option>
-                                    </select>
-                                    <span class="label">pais</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                            <ion-col>
-                                <label for="emergencyContact" class="inp">
-                                    <input type="text" id="emergencyContact" formControlName="emergencyContact">
-                                    <span class="label">Número de teléfono</span>
-                                    <span class="focus-bg"></span>
-                                </label>
-                            </ion-col>
-                        </ion-row>
-    
-                    </div>
-                    <div class="card-button">
-                        <ion-row>
-                            <ion-col>
-                                <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'"
-                                    (clickButton)="onSubmitStepThree()"></app-button>
-                            </ion-col>
-                        </ion-row>
-                        <ion-row>
-                            <ion-col>
-                                <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
-                            </ion-col>
-                        </ion-row>
-                    </div>
-                </form>
+            <!-- <app-pin-field pattern="[0-9]" [state]=state [id]="'pin_debit'" ngDefaultControl [(ngModel)]="pin"
+            (ngModelChange)="getPin($event)" message="'hola que mas pues'">
+          </app-pin-field> -->
+             <form [formGroup]="registerFormStepOne" *ngIf="stepOne">
+                <div class="step-one">
+                    <ion-row>
+                        <ion-col size="12">
+                            <label for="name" class="inp">
+                                <input type="text" id="name" formControlName="name">
+                                <span class="label">Nombres</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                        <ion-col size="12">
+                            <span *ngIf="name.errors?.minlength">
+                                <small>Debe tener minimo 4 caracteres</small>
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="12">
+                            <label for="surname" class="inp">
+                                <input type="text" id="surname" formControlName="surname">
+                                <span class="label">Apellidos</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                        <ion-col size="12">
+                            <span *ngIf="name.errors?.minlength">
+                                <small>Debe tener minimo 4 caracteres</small>
+                            </span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <label for="birthDate" class="inp">
+                                <ion-datetime displayFormat="MM DD YY" id="birthDate" formControlName="birthDate">
+                                </ion-datetime>
+                                <span class="label">Fecha de nacimiento</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div class="card-button">
+                    <ion-row>
+                        <ion-col>
+                            <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'"
+                                (clickButton)="onSubmitStepOne()" [isDisabled]="registerFormStepOne.invalid">
+                            </app-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </form>
+            <form [formGroup]="registerFormStepTwo" *ngIf="stepTwo">
+                <div class="step-two">
+                    <ion-row>
+                        <ion-col size="3">
+                            <label for="documentType" class="inp">
+                                <select id="documentType" formControlName="documentType">
+                                    <option value="cc">CC</option>
+                                    <option value="ti">TI</option>
+                                </select>
+                                <span class="label">CC</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                        <ion-col>
+                            <label for="document" class="inp">
+                                <input type="text" id="document" formControlName="document">
+                                <span class="label">Número de documento</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <label for="password" class="inp">
+                                <input type="password" id="password" formControlName="password">
+                                <span class="label">Contraseña</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="3">
+                            <label for="inp" class="inp">
+                                <select name="" id="inp" formControlName="typeDoc">
+                                    <option value="cc">Col</option>
+                                    <option value="ti">Ven</option>
+                                </select>
+                                <span class="label"></span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                        <ion-col>
+                            <label for="phoneNumber" class="inp">
+                                <input type="text" id="phoneNumber" formControlName="phoneNumber">
+                                <span class="label">Número de teléfono</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                    </ion-row>
+                </div>
+                <div class="card-button">
+                    <ion-row>
+                        <ion-col>
+                            <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'"
+                                (clickButton)="onSubmitStepTwo()"></app-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </form>
+            <form [formGroup]="registerFormStepThree" *ngIf="stepThree">
+                <div class="step-three">
+                    <ion-row>
+                        <ion-col>
+                            <label for="emergencyContactName" class="inp">
+                                <input type="text" id="emergencyContactName" formControlName="emergencyContactName">
+                                <span class="label">Nombre completo del contacto</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="3">
+                            <label for="country" class="inp">
+                                <select id="country" formControlName="country">
+                                    <option value="cc">+57</option>
+                                    <option value="ti">+507</option>
+                                </select>
+                                <span class="label">pais</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                        <ion-col>
+                            <label for="emergencyContact" class="inp">
+                                <input type="text" id="emergencyContact" formControlName="emergencyContact">
+                                <span class="label">Número de teléfono</span>
+                                <span class="focus-bg"></span>
+                            </label>
+                        </ion-col>
+                    </ion-row>
+
+                </div>
+                <div class="card-button">
+                    <ion-row>
+                        <ion-col>
+                            <app-button [type]="'submit'" [text]="'buttons.continue'" [color]="'button-primary'"
+                                (clickButton)="onSubmitStepThree()"></app-button>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <app-button [text]="'buttons.cancel'" [color]="'button-line'"></app-button>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </form> 
 
         </app-principal-card>
     </div>
