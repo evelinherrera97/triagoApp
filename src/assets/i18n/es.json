@@ -10,10 +10,14 @@
     "login": {
         "title": "Iniciar sesion",
         "initTitle": "Accede a tu cuenta",
-        "seconfTitle": "ingresa tus datos para iniciar",
-        "number": "numero de documento",
-        "password": "Contraseña"
-
+        "seconfTitle": "Ingresa tus datos para iniciar",
+        "number": "Número de documento",
+        "password": "Contraseña",
+        "forget-user": "Olvidaste tu usuario",
+        "terms": "Al ingresar, estás aceptando los",
+        "terms-use": "términos y condiciones de uso",
+        "and": "y", 
+        "terms-privacy": "políticas de privacidad"
     },
 
     "register": "Registro"
